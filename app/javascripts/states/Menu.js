@@ -2,6 +2,7 @@ class Menu extends Phaser.State {
   create() {
     this.createBackgroundAndGround();
     this.createTitle();
+    this.createStartButton();
   }
 
   createBackgroundAndGround() {
@@ -54,6 +55,12 @@ class Menu extends Phaser.State {
     this.titleGroup.x = 30;
     this.titleGroup.y = 100;
 
+// up
+//     this.game.add.tween(this.titleGroup).to({y:115}, 350, Phaser.Easing.Linear.NONE, true, 0, 1000, true);
+
+//     // add our start button with a callback
+//     this.startButton = this.game.add.button(this.game.width/2, 300, 'startButton', this.startClick, this);
+//     this.startButton.anchor.setTo(0.5,0.5);
 
 
 
@@ -64,6 +71,14 @@ class Menu extends Phaser.State {
 
   createStartButton() {
     // Add a start button with a callback
+    // using our preloaded "startButton" asset
+    // save it in this.startButton as reference
+    // game.add automatically adds it to World's children
+    this.startButton = this.game.add.button(this.game.width / 2, 300, "startButton", this.goToPlay, this);
+    // the anchor property is a PIXI property
+    // this sets the anchor of this button
+    // right at the center of itself
+    this.startButton.anchor.setTo(0.5, 0.5);
   }
 
   goToPlay() {
