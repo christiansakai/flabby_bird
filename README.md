@@ -1,6 +1,6 @@
 # Flabby Bird
 
-Small game (a Flappy Bird clone) using Phaser by following the tutorial from [www.codevinsky.com](http://www.codevinsky.com/phaser-2-0-tutorial-flappy-bird-part-1/). Syntax is using modern ES6 Class. Assets are taken from the original [repo](https://github.com/codevinsky/flappy-bird-reborn<Paste>).
+Small game (a Flappy Bird clone) using Phaser by following a very excellent (probably one of the best) tutorial from [www.codevinsky.com](http://www.codevinsky.com/phaser-2-0-tutorial-flappy-bird-part-1/). Syntax is using modern ES6 Class. Assets are taken from the original [repo](https://github.com/codevinsky/flappy-bird-reborn<Paste>).
 
 # Getting Started
 

@@ -55,18 +55,15 @@ class Menu extends Phaser.State {
     this.titleGroup.x = 30;
     this.titleGroup.y = 100;
 
-// up
-//     this.game.add.tween(this.titleGroup).to({y:115}, 350, Phaser.Easing.Linear.NONE, true, 0, 1000, true);
-
-//     // add our start button with a callback
-//     this.startButton = this.game.add.button(this.game.width/2, 300, 'startButton', this.startClick, this);
-//     this.startButton.anchor.setTo(0.5,0.5);
-
-
-
-    
-
-
+    // Create an oscilating animation tween
+    // for the group
+    // tween is different than animation
+    // animation is obtained from the frames of the sprites
+    // tween is animation created by manipulating Phaser object
+    // game.add does not add this to World's children, unlike other objects
+    const titleTween = this.game.add.tween(this.titleGroup);
+    // refer to the Phaser.Tween docs for details
+    titleTween.to({ y: 115 }, 350, Phaser.Easing.Linear.NONE, true, 0, -1, true);
   }
 
   createStartButton() {

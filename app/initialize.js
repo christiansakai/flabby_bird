@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 288, 
     height: 505,
     engine: Phaser.AUTO,
-    domNode: "app"
+    domNode: "game"
   });
 
   game.start();
