@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: initialize.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,38 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: initialize.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Game from "./javascripts/Game";
 
+/** 
+ * @function
+ * @name startGame
+ * Mount the game to a DOM element
+ * with id "game" and start the game.
+ */
+const startGame = () => {
+  const game = new Game({
+    width: 288, 
+    height: 505,
+    engine: Phaser.AUTO,
+    domNode: "game"
+  });
 
-    <h3> </h3>
+  game.start();
+};
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', startGame);
+</code></pre>
+        </article>
+    </section>
 
 
 

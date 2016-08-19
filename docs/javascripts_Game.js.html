@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: javascripts/Game.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,55 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: javascripts/Game.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Preload from "./states/Preload";
+import Menu from "./states/Menu";
+import Play from "./states/Play";
 
+/**
+ * Class representing the Game.
+ * @extends Phaser.Game
+ */
+class Game extends Phaser.Game {
 
-    <h3> </h3>
+  /**
+   * Create a game.
+   * @param {object} config game configuration
+   * @param {number} config.width game width in pixels
+   * @param {number} config.height game height in pixels
+   * @param {Phaser.Physics} config.engine game physics
+   * @param {string} config.domNode DOM id where the game mounts
+   */
+  constructor({ width, height, engine, domNode }) {
+    super(width, height, engine, domNode);
 
+    this.state.add("Preload", Preload, false);
+    this.state.add("Menu", Menu, false);
+    this.state.add("Play", Play, false);
+  }
 
+  /**
+   * Start the game by
+   * starting Preload state
+   */
+  start() {
+    this.state.start("Preload");
+  }
 
+}
 
-
-
-
-
-
-
-    
-
-
-
-
-
+export default Game;
+</code></pre>
+        </article>
+    </section>
 
 
 

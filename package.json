@@ -10,7 +10,7 @@
   "scripts": {
     "start": "./node_modules/.bin/brunch watch --server",
     "prod": "./node_modules/.bin/brunch build --production",
-    "docs": "./node_modules/.bin/jsdoc app/javascripts -r -d docs"
+    "docs": "./node_modules/.bin/jsdoc app -r -c jsdoc.conf.json -d docs"
   },
   "dependencies": {
     "jsdoc": "^3.4.0",

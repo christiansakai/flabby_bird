@@ -1,6 +1,12 @@
 import Game from "./javascripts/Game";
 
-document.addEventListener('DOMContentLoaded', () => {
+/** 
+ * @function
+ * @name startGame
+ * Mount the game to a DOM element
+ * with id "game" and start the game.
+ */
+const startGame = () => {
   const game = new Game({
     width: 288, 
     height: 505,
@@ -9,4 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   game.start();
-});
+};
+
+document.addEventListener('DOMContentLoaded', startGame);
