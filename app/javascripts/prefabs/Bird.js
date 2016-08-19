@@ -15,6 +15,24 @@ class Bird extends Phaser.Sprite {
 
     // Enable Physics to affect this sprite
     this.game.physics.arcade.enableBody(this);
+
+    // Don't let this bird affected by gravity
+    this.body.allowGravity = false;
+
+    // This bird is not alive when the game starts
+    this.alive = false;
+
+    // Add audio and add reference it here so we can play
+    // interestingly this doesnt get add to the game World's children
+    this.flapSound = this.game.add.audio('flap');
+  }
+
+  enableGravity() {
+    this.body.allowGravity = true;
+  }
+
+  makeAlive() {
+    this.alive = true;
   }
 
   flap() {
@@ -34,6 +52,8 @@ class Bird extends Phaser.Sprite {
     const birdTween = this.game.add.tween(this)
     birdTween.to({ angle: -40 }, 100);
     birdTween.start();
+
+    this.flapSound.play();
   }
 
   update() {
@@ -42,10 +62,13 @@ class Bird extends Phaser.Sprite {
     // its update function is called
     // automatically by Phaser just like
     // state update
-    // Check to see if our angle is less than 90
+    // Check to see if our angle is less than 90 and alive
+    // (alive) here means when the game starts
     // if it is, rotate the bird towards the ground
     // by 2.5 degrees
-    this.angle += 2.5;
+    if (this.angle < 90 && this.alive) {
+      this.angle += 2.5;
+    }
   }
 }
 

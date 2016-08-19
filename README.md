@@ -17,3 +17,6 @@ Small game (a Flappy Bird clone) using Phaser by following a very excellent (pro
 * Develop:
   * `public/` dir is fully auto-generated and served by Brunch. Write your code in `app/` dir
   * Place static files you want to be copied from `app/assets/` to `public/`
+
+* Docs:
+  * `npm run docs` to generate docs in `docs` dir

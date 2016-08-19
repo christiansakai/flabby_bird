@@ -2,6 +2,10 @@ import Preload from "./states/Preload";
 import Menu from "./states/Menu";
 import Play from "./states/Play";
 
+/**
+ * Class representing a dot.
+ * @extends Phaser.Game
+ */
 class Game extends Phaser.Game {
   constructor({ width, height, engine, domNode }) {
     super(width, height, engine, domNode);

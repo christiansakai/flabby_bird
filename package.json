@@ -9,9 +9,11 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/brunch watch --server",
-    "prod": "./node_modules/.bin/brunch build --production"
+    "prod": "./node_modules/.bin/brunch build --production",
+    "docs": "./node_modules/.bin/jsdoc app/javascripts -r -d docs"
   },
   "dependencies": {
+    "jsdoc": "^3.4.0",
     "phaser": "^2.6.1"
   },
   "devDependencies": {
