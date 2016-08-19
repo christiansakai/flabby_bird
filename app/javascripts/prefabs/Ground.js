@@ -30,7 +30,7 @@ class Ground extends Phaser.TileSprite {
   }
 
   /**
-   * Enable Physics to affect this
+   * enable physics to affect this
    * object (for collision detection)
    * but disable the gravity and set this
    * object immovable
