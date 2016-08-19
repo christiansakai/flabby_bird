@@ -10,6 +10,7 @@ class Game extends Phaser.Game {
 
   /**
    * Create a game.
+   *
    * @param {object} config game configuration
    * @param {number} config.width game width in pixels
    * @param {number} config.height game height in pixels
