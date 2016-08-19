@@ -16,6 +16,7 @@ class Preload extends Phaser.State {
     // per frame in this file is 34 x 24 pixels
     // total 3 frames
     this.load.spritesheet("bird", "/bird.png", 34, 24, 3);
+    this.load.spritesheet('pipe', "/pipes.png", 54, 320, 2);  
   }
 
   goToMenu() {
