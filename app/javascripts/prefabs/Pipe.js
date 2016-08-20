@@ -11,10 +11,10 @@ class Pipe extends Phaser.Sprite {
    *
    * @param {object} config sprite configuration
    * @param {Phaser.Game} config.game the current game object
-   * @param {number} x x-axis coordinate of the sprite in pixels
-   * @param {number} y y-axis coordinate of the sprite in pixels
-   * @param {string} asset preloaded asset name
-   * @param {number} frame frame index of the preloaded asset
+   * @param {number} config.x x-axis coordinate of the sprite in pixels
+   * @param {number} config.y y-axis coordinate of the sprite in pixels
+   * @param {string} config.asset preloaded asset name
+   * @param {number} config.frame frame index of the preloaded asset
    */
   constructor({ game, x, y, asset, frame }) {
     super(game, x, y, asset, frame);

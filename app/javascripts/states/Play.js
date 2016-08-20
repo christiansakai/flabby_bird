@@ -94,7 +94,6 @@ class Play extends Phaser.State {
 
   startGame() {
     // make the bird fall and make it alive (for rotating)
-    this.bird.enableGravity();
     this.bird.makeAlive();
 
     // run pipe evnet loop
@@ -175,7 +174,7 @@ class Play extends Phaser.State {
     this.ground.stopScroll();
     this.scoreboard = new Scoreboard({ game: this.game });
     this.game.add.existing(this.scoreboard);
-    this.scoreboard.showScore(this.score);
+    this.scoreboard.showScoreBoard(this.score);
     // this.game.state.start("GameOver");
   }
 

@@ -61,7 +61,7 @@ class Scoreboard extends Phaser.Group {
    * Save this object reference into `this.scoreText`.
    */
   createScoreText() {
-    this.scoreText = this.game.add.bitmapText(this.scoreboard.width, 
+    this.scoreText = this.game.add.bitmapText(this.board.width, 
                                               180, 
                                               'flappyfont', 
                                               '', 
@@ -76,7 +76,11 @@ class Scoreboard extends Phaser.Group {
    * Save this object reference into `this.bestScoreText`.
    */
   createBestScoreText() {
-    this.bestScoreText = this.game.add.bitmapText(this.scoreboard.width, 230, 'flappyfont', '', 18);
+    this.bestScoreText = this.game.add.bitmapText(this.board.width, 
+                                                  230, 
+                                                  'flappyfont', 
+                                                  '', 
+                                                  18);
     this.add(this.bestScoreText);
   }
 
@@ -116,7 +120,7 @@ class Scoreboard extends Phaser.Group {
     this.showScore(score);
     this.showMedal(score);
 
-    const tween =this.game.add.tween(this);
+    const tween = this.game.add.tween(this);
     tween.to({ y: 0 }, 1000, Phaser.Easing.Bounce.Out, true);
   }
 

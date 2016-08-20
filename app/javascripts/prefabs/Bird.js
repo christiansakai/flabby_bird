@@ -12,9 +12,9 @@ class Bird extends Phaser.Sprite {
    *
    * @param {object} config sprite configuration
    * @param {Phaser.Game} config.game the current game object
-   * @param {number} x x-axis coordinate of the sprite in pixels
-   * @param {number} y y-axis coordinate of the sprite in pixels
-   * @param {string} asset preloaded asset name
+   * @param {number} config.x x-axis coordinate of the sprite in pixels
+   * @param {number} config.y y-axis coordinate of the sprite in pixels
+   * @param {string} config.asset preloaded asset name
    */
   constructor({ game, x, y, asset }) {
     super(game, x, y, asset);

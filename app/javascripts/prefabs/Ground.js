@@ -14,11 +14,11 @@ class Ground extends Phaser.TileSprite {
    *
    * @param {object} config sprite configuration
    * @param {Phaser.Game} config.game the current game object
-   * @param {number} x x-axis coordinate of the sprite in pixels
-   * @param {number} y y-axis coordinate of the sprite in pixels
-   * @param {number} width width of the sprite in pixels
-   * @param {number} height height of the sprite  in pixels
-   * @param {string} asset preloaded asset name
+   * @param {number} config.x x-axis coordinate of the sprite in pixels
+   * @param {number} config.y y-axis coordinate of the sprite in pixels
+   * @param {number} config.width width of the sprite in pixels
+   * @param {number} config.height height of the sprite  in pixels
+   * @param {string} config.asset preloaded asset name
    */
   constructor({ game, x, y, width, height, asset }) {
     super(game, x, y, width, height, asset);
