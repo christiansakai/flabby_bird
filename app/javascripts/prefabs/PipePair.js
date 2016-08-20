@@ -1,8 +1,23 @@
 import Pipe from "./Pipe";
 
-// This is basically a group of
-// upsidedown and normal pipe
+/**
+ * Class representing a pair of Pipes.
+ * A pair of Pipes is a group of normal
+ * Pipe with an upside down Pipe. 
+ * @extends Phaser.Group
+ */
 class PipePair extends Phaser.Group {
+
+  /**
+   * Create a Pair of Pipe. This group
+   * is created by creating
+   * a normal pipe (bottom pipe) and an
+   * upside down pipe (top pipe).
+   *
+   * @param {object} config group configuration
+   * @param {Phaser.Game} config.game the current game object
+   * @param {Phaser.Group} config.parent the parent that suppose to contain this group
+   */
   constructor({ game, parent }) {
     super(game, parent);
 

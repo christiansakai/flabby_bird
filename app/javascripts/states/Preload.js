@@ -46,7 +46,7 @@ class Preload extends Phaser.State {
     this.load.image("startButton", "/start-button.png");
     this.load.image("instructions", "/instructions.png");
     this.load.image("getReady", "/get-ready.png");
-    this.load.image('scoreboard', '/scoreboard.png');
+    this.load.image('board', '/board.png');
     this.load.image('gameover', '/gameover.png');
     this.load.image("particle", "particle.png");
   }
