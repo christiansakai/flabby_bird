@@ -121,7 +121,7 @@ class Scoreboard extends Phaser.Group {
     this.showMedal(score);
 
     const tween = this.game.add.tween(this);
-    tween.to({ y: 0 }, 1000, Phaser.Easing.Bounce.Out, true);
+    tween.to({ y: 0 }, 1000, Phaser.Easing.Default, true);
   }
 
   /**
@@ -159,14 +159,14 @@ class Scoreboard extends Phaser.Group {
   showMedal(score) {
     let medal;
 
-    if (score >= 10 && score < 20) {
+    if (score >= 1 && score < 3) {
       medal = this.game.add.sprite(-65 , 7, 'medals', 1);
       medal.anchor.setTo(0.5, 0.5);
-      this.scoreboard.addChild(medal);
-    } else if (score >= 20) {
+      this.board.addChild(medal);
+    } else if (score >= 3) {
       medal = this.game.add.sprite(-65 , 7, 'medals', 0);
       medal.anchor.setTo(0.5, 0.5);
-      this.scoreboard.addChild(medal);
+      this.board.addChild(medal);
     }
 
     // A Particle Emitter is a special 
@@ -177,12 +177,14 @@ class Scoreboard extends Phaser.Group {
     // blowing leaves, fireflies, fire, smoke, 
     // ground fog, waterfalls, fireworks, etc.
 
+    // TODO: for some reason this doesn't work
     // Only create emitter if medal exists
     if (medal) {    
-
       // Create insane 400 amount of particles
-      var emitter = this.game.add.emitter(medal.x, medal.y, 400);
+      const emitter = this.game.add.emitter(medal.x, medal.y, 400);
     
+      this.board.addChild(emitter);
+
       emitter.width = medal.width;
       emitter.height = medal.height;
 
@@ -206,8 +208,6 @@ class Scoreboard extends Phaser.Group {
       // 1000 ms before a particle is killed
       // and emits every 1000 ms
       emitter.start(false, 1000, 1000);
-
-      this.scoreboard.addChild(emitter);
     }
   }
 
