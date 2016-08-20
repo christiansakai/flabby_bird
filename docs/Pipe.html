@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Bird</title>
+    <title>JSDoc: Class: Pipe</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Bird</h1>
+    <h1 class="page-title">Class: Pipe</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2>Bird</h2>
+        <h2>Pipe</h2>
         
-            <div class="class-description"><p>Class representing Bird Sprite.</p></div>
+            <div class="class-description"><p>Class representing a Pipe</p></div>
         
     
 </header>
@@ -44,17 +44,16 @@
     <h2>Constructor</h2>
     
 
-    <h4 class="name" id="Bird"><span class="type-signature"></span>new Bird<span class="signature">(config)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Pipe"><span class="type-signature"></span>new Pipe<span class="signature">(config)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Create a Bird Sprite. This sprite is created
-default with animation running, affected
-by Physics but not affected by gravity.
-It has default property alive set to false.</p>
+    <p>Create a Pipe sprite. This sprite 
+is created with Physics enabled but
+unafffected by gravity and immovable.</p>
 </div>
 
 
@@ -221,6 +220,29 @@ It has default property alive set to false.</p>
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>frame</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>frame index of the preloaded asset</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -265,7 +287,7 @@ It has default property alive set to false.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line5">line 5</a>
+        <a href="javascripts_prefabs_Pipe.js.html">javascripts/prefabs/Pipe.js</a>, <a href="javascripts_prefabs_Pipe.js.html#line5">line 5</a>
     </li></ul></dd>
     
 
@@ -325,423 +347,6 @@ It has default property alive set to false.</p>
 
     
 
-    <h4 class="name" id="addAnimation"><span class="type-signature"></span>addAnimation<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Add animation to this sprite</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line47">line 47</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="addSound"><span class="type-signature"></span>addSound<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Add sound effect for flap method.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line74">line 74</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="flap"><span class="type-signature"></span>flap<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Fly this bird upward by
-setting the y axis velocity negative
-and adding a tween to animate
-this bird. Play sound effects
-when flapping.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line109">line 109</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="makeAlive"><span class="type-signature"></span>makeAlive<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Enable gravity to affect
-this sprite and turn the alive
-property into true.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line85">line 85</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="makeDead"><span class="type-signature"></span>makeDead<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Disable gravity and turn alive
-property into false</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line97">line 97</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
     <h4 class="name" id="setAnchor"><span class="type-signature"></span>setAnchor<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
@@ -795,7 +400,7 @@ Anchor is a PIXI API.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line40">line 40</a>
+        <a href="javascripts_prefabs_Pipe.js.html">javascripts/prefabs/Pipe.js</a>, <a href="javascripts_prefabs_Pipe.js.html#line31">line 31</a>
     </li></ul></dd>
     
 
@@ -833,9 +438,10 @@ Anchor is a PIXI API.</p>
 
 
 <div class="description">
-    <p>Enable Physics engine to affect
-this sprite. Also disables
-gravity by default.</p>
+    <p>enable physics to affect this
+object (for collision detection)
+but disable the gravity and set this
+object immovable</p>
 </div>
 
 
@@ -879,92 +485,7 @@ gravity by default.</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line61">line 61</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">()</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    <p>Because this class is an
-extension of Phaser.Sprite, 
-the update function is called by Phaser
-just like in a game State.</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_prefabs_Bird.js.html">javascripts/prefabs/Bird.js</a>, <a href="javascripts_prefabs_Bird.js.html#line131">line 131</a>
+        <a href="javascripts_prefabs_Pipe.js.html">javascripts/prefabs/Pipe.js</a>, <a href="javascripts_prefabs_Pipe.js.html#line41">line 41</a>
     </li></ul></dd>
     
 

@@ -129,8 +129,10 @@ class Menu extends Phaser.State {
   }
 
   /**
-   * This method is called before
-   * the Game transitions to another state.
+   * This method is called automatically
+   * by the game before the Game transitions 
+   * to another state (including restarting 
+   * to its current state).
    * Destroys all created assets here.
    */
   shutdown() {

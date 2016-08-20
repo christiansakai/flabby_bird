@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: initialize.js</title>
+    <title>JSDoc: Source: javascripts/prefabs/Pipe.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: initialize.js</h1>
+    <h1 class="page-title">Source: javascripts/prefabs/Pipe.js</h1>
 
     
 
@@ -26,26 +26,57 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import Game from "./javascripts/Game";
-
-/** 
- * @function
- * @name startGame
- * Mount the game to a DOM element
- * with id "game" and start the game.
+            <pre class="prettyprint source linenums"><code>/**
+ * Class representing a Pipe
+ * @extends Phaser.Sprite
  */
-const startGame = () => {
-  const game = new Game({
-    width: 288, 
-    height: 505,
-    engine: Phaser.AUTO,
-    domNode: "game"
-  });
+class Pipe extends Phaser.Sprite {
 
-  game.start();
-};
+  /**
+   * Create a Pipe sprite. This sprite 
+   * is created with Physics enabled but
+   * unafffected by gravity and immovable.
+   *
+   * @param {object} config sprite configuration
+   * @param {Phaser.Game} config.game the current game object
+   * @param {number} config.x x-axis coordinate of the sprite in pixels
+   * @param {number} config.y y-axis coordinate of the sprite in pixels
+   * @param {string} config.asset preloaded asset name
+   * @param {number} config.frame frame index of the preloaded asset
+   */
+  constructor({ game, x, y, asset, frame }) {
+    super(game, x, y, asset, frame);
 
-document.addEventListener('DOMContentLoaded', startGame);
+    this.setAnchor();
+    this.setPhysics();
+  }
+
+  /**
+   * Set anchor for this Sprite
+   * at the center.
+   * Anchor is a PIXI API.
+   */
+  setAnchor() {
+    this.anchor.setTo(0.5, 0.5);
+  }
+
+  /**
+   * enable physics to affect this
+   * object (for collision detection)
+   * but disable the gravity and set this
+   * object immovable
+   */
+  setPhysics() {
+    // Please refer to Ground.js
+    // for more explanation
+    this.game.physics.arcade.enableBody(this);
+    this.body.allowGravity = false;
+    this.body.immovable = true;
+  }
+
+}
+
+export default Pipe;
 </code></pre>
         </article>
     </section>

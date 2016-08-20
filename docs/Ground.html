@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Game</title>
+    <title>JSDoc: Class: Ground</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Game</h1>
+    <h1 class="page-title">Class: Ground</h1>
 
     
 
@@ -28,9 +28,9 @@
 
 <header>
     
-        <h2>Game</h2>
+        <h2>Ground</h2>
         
-            <div class="class-description"><p>Class representing the Game.</p></div>
+            <div class="class-description"><p>Class representing Ground Sprite.</p></div>
         
     
 </header>
@@ -44,14 +44,19 @@
     <h2>Constructor</h2>
     
 
-    <h4 class="name" id="Game"><span class="type-signature"></span>new Game<span class="signature">(config)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Ground"><span class="type-signature"></span>new Ground<span class="signature">(config)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Create a game.</p>
+    <p>Create a Ground Sprite. This sprite is
+created with Physics enabled (to enable
+collision detection) but unaffected by
+gravity and is immovable. Automatically
+scrolled in negative x-axis (a capability
+of Phaser.TileSprite object)</p>
 </div>
 
 
@@ -103,7 +108,7 @@
 
             
 
-            <td class="description last"><p>game configuration</p>
+            <td class="description last"><p>sprite configuration</p>
                 <h6>Properties</h6>
                 
 
@@ -129,6 +134,75 @@
 
         <tr>
             
+                <td class="name"><code>game</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Phaser.Game</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the current game object</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>x-axis coordinate of the sprite in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>y-axis coordinate of the sprite in pixels</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>width</code></td>
             
 
@@ -145,7 +219,7 @@
 
             
 
-            <td class="description last"><p>game width in pixels</p></td>
+            <td class="description last"><p>width of the sprite in pixels</p></td>
         </tr>
 
     
@@ -168,37 +242,14 @@
 
             
 
-            <td class="description last"><p>game height in pixels</p></td>
+            <td class="description last"><p>height of the sprite  in pixels</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>engine</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Phaser.Physics</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>game physics</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>domNode</code></td>
+                <td class="name"><code>asset</code></td>
             
 
             <td class="type">
@@ -214,7 +265,7 @@
 
             
 
-            <td class="description last"><p>DOM id where the game mounts</p></td>
+            <td class="description last"><p>preloaded asset name</p></td>
         </tr>
 
     
@@ -262,7 +313,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_Game.js.html">javascripts/Game.js</a>, <a href="javascripts_Game.js.html#line9">line 9</a>
+        <a href="javascripts_prefabs_Ground.js.html">javascripts/prefabs/Ground.js</a>, <a href="javascripts_prefabs_Ground.js.html#line5">line 5</a>
     </li></ul></dd>
     
 
@@ -298,7 +349,7 @@
 
 
     <ul>
-        <li>Phaser.Game</li>
+        <li>Phaser.TileSprite</li>
     </ul>
 
 
@@ -322,15 +373,17 @@
 
     
 
-    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setPhysics"><span class="type-signature"></span>setPhysics<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Start the game by
-starting Preload state</p>
+    <p>enable physics to affect this
+object (for collision detection)
+but disable the gravity and set this
+object immovable</p>
 </div>
 
 
@@ -374,7 +427,89 @@ starting Preload state</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="javascripts_Game.js.html">javascripts/Game.js</a>, <a href="javascripts_Game.js.html#line32">line 32</a>
+        <a href="javascripts_prefabs_Ground.js.html">javascripts/prefabs/Ground.js</a>, <a href="javascripts_prefabs_Ground.js.html#line38">line 38</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="stopScrolling"><span class="type-signature"></span>stopScrolling<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Disable scroll for this TileSprite.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="javascripts_prefabs_Ground.js.html">javascripts/prefabs/Ground.js</a>, <a href="javascripts_prefabs_Ground.js.html#line61">line 61</a>
     </li></ul></dd>
     
 

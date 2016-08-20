@@ -91,6 +91,15 @@ class Bird extends Phaser.Sprite {
   }
 
   /**
+   * Disable gravity and turn alive
+   * property into false
+   */
+  makeDead() {
+    this.body.allowGravity = false;
+    this.alive = false;
+  }
+
+  /**
    * Fly this bird upward by
    * setting the y axis velocity negative
    * and adding a tween to animate
